@@ -242,12 +242,13 @@ header.on .snsicon li a{
     width: 100%;
     height: 130px;
     padding: 0 20px 0 0;
+    border-left: none;
 }
 .news_sub a{
     height: 50px;
     -webkit-line-clamp: 2;
     line-height: 1.5;
-    max-height: 60%;
+    max-height: 50%;
     margin: 20px 0 20px 0;
     padding: 0 0 0 10px;
 }
@@ -389,6 +390,9 @@ header.on .snsicon li a{
 .family_site{
     left: 0;
     margin: 30px 0 0 0;
+}
+.family_wrap{
+    right: unset;
 }
 .foot_add{
     width: 100%;

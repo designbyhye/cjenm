@@ -33,18 +33,18 @@ $(".ch_box.toon").hover(function () {
 });
 
 //섹션3 애니메이션 딜레이
-    $(window).scroll( function(){
-        $('.ir_txt').each( function(){
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > bottom_of_object ){
-                $(this).addClass('ir_txtfade');
-            }
-            if( bottom_of_window < bottom_of_object ){
-                $(this).removeClass('ir_txtfade');
-            }
-        });
+$(window).scroll( function(){
+    $('.ir_txt').each( function(){
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        if( bottom_of_window > bottom_of_object ){
+            $(this).addClass('ir_txtfade');
+        }
+        if( bottom_of_window < bottom_of_object ){
+            $(this).removeClass('ir_txtfade');
+        }
     });
+});
 
 //뉴스룸 롤링
 $(function() {
@@ -61,23 +61,23 @@ $(function() {
 });
 
 //뉴스룸 버튼
-    $(".pre_arrow").click(function () {
-        $(".news_sub a:first-child").animate({ "margin-Top": "-28px" }, 400, function () {
-        $(this).detach().appendTo('.news_sub');
-        });
+$(".pre_arrow").click(function () {
+    $(".news_sub a:first-child").animate({ "margin-Top": "-28px" }, 400, function () {
+    $(this).detach().appendTo('.news_sub');
     });
-    $(".next_arrow").click(function () {
-        $(".news_sub a:first-child").animate({ "margin-Top": "28px" }, 400, function () {
-        $(this).detach().appendTo('.news_sub');
-        });
+});
+$(".next_arrow").click(function () {
+    $(".news_sub a:first-child").animate({ "margin-Top": "28px" }, 400, function () {
+    $(this).detach().appendTo('.news_sub');
     });
+});
   
 //nav 전체 내려오는 sub
-    $(".nav > li > ul").hide();
-    $(".nav > li").click(function(){
-        $(this).children("ul").stop().slideToggle();
-        $(".nav > li").not(this).children("ul").slideUp();
-    });
+$(".nav > li > ul").hide();
+$(".nav > li").click(function(){
+    $(this).children("ul").stop().slideToggle();
+    $(".nav > li").not(this).children("ul").slideUp();
+});
 
 
 
