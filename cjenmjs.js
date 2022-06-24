@@ -82,6 +82,25 @@ $(document).ready(function () {
         fltRt.innerText = yesterStock.fltRt; //등락비율
         trqu.innerText = `${numberWithCommas(yesterStock.trqu)}`; //거래량
         mrktTotAmt.innerText = numberWithKorean(yesterStock.mrktTotAmt); //시가총액
+
+        if(yesterStock.vs > 0){
+            //상승
+            vs.innerText = yesterStock.vs; // 등락금액
+            vs.classList.add("up");
+        }else{
+            //하락
+            vs.innerText = yesterStock.vs; // 등락금액
+            vs.classList.add("down");
+        }
+        if(yesterStock.fltRt > 0){
+            //상승
+            fltRt.innerText = yesterStock.fltRt; // 등락비율
+            fltRt.classList.add("up");
+        }else{
+            //하락
+            fltRt.innerText = yesterStock.fltRt; // 등락비율
+            fltRt.classList.add("down");
+        }
     });
     // 세자리 콤마
     function numberWithCommas(x) {

@@ -410,6 +410,12 @@ header .snsicon{
     line-height: 30px;
     border-bottom: 1px solid #666;
 }
+
+.up { color: #e74c3c; }
+.up::before { content: "\25B4"; }
+.down { color: #3498db; }
+.down::before { content: "\25BE"; }
+
 .news_sub{
     width: 100%;
     height: 70px;
