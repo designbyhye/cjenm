@@ -1,44 +1,56 @@
-//nav 전체 내려오는 sub
-$(".nav > li > ul").hide();
-$(".nav > li").click(function(){
-    $(this).children("ul").stop().slideToggle();
-    $(".nav > li").not(this).children("ul").slideUp();
-});
-//하단 계열사 로고
-$(".ch_box.tving").hover(function () {
-    $(".txt_hover1").toggleClass("on");
-});
-$(".ch_box.mnet").hover(function () {
-     $(".txt_hover2").toggleClass("on");
-});
-$(".ch_box.ocn").hover(function () {
-    $(".txt_hover3").toggleClass("on");
-});
-$(".ch_box.toon").hover(function () {
-    $(".txt_hover4").toggleClass("on");
-});
-//탭구조
-$(".tab > ul > li").click(function() {
-    $(this).addClass('on')
-        .siblings().removeClass('on');
-    $("#" + $(this).data('id')).addClass('on')
-        .siblings().removeClass('on');
-});
+$(document).ready(function(){
+    //nav 전체 내려오는 sub
+    $(".nav > li > ul").hide();
+    $(".nav > li").click(function(){
+        $(this).children("ul").stop().slideToggle();
+        $(".nav > li").not(this).children("ul").slideUp();
+    });
+    //하단 계열사 로고
+    $(".ch_box.tving").hover(function () {
+        $(".txt_hover1").toggleClass("on");
+    });
+    $(".ch_box.mnet").hover(function () {
+        $(".txt_hover2").toggleClass("on");
+    });
+    $(".ch_box.ocn").hover(function () {
+        $(".txt_hover3").toggleClass("on");
+    });
+    $(".ch_box.toon").hover(function () {
+        $(".txt_hover4").toggleClass("on");
+    });
 
-//서브페이지 탭구조 연결
-if (location.hash == "#tab1") {
-    $('#tab1').addClass('on').siblings().removeClass('on');
-} else if (location.hash == "#tab2") {
-    $('#tab2').addClass('on').siblings().removeClass('on');
-} else if (location.hash == "#tab3") {
-    $('#tab3').addClass('on').siblings().removeClass('on');
-} else if (location.hash == "#tab4") {
-    $('#tab4').addClass('on').siblings().removeClass('on');
-} else if (location.hash == "#tab5") {
-    $('#tab5').addClass('on').siblings().removeClass('on');
-} else if (location.hash == "#tab6") {
-    $('#tab6').addClass('on').siblings().removeClass('on');
+    //탭구조
+    $(".tab > ul > li").click(function() {
+        $(this).addClass('on')
+            .siblings().removeClass('on');
+        $("#" + $(this).data('id')).addClass('on')
+            .siblings().removeClass('on');
+    });
+
+    //서브페이지 탭구조 연결
+    if (location.hash == "#tab1") {
+        $('#tab1').addClass('on').siblings().removeClass('on');
+    } else if (location.hash == "#tab2") {
+        $('#tab2').addClass('on').siblings().removeClass('on');
+    } else if (location.hash == "#tab3") {
+        $('#tab3').addClass('on').siblings().removeClass('on');
+    } else if (location.hash == "#tab4") {
+        $('#tab4').addClass('on').siblings().removeClass('on');
+    } else if (location.hash == "#tab5") {
+        $('#tab5').addClass('on').siblings().removeClass('on');
+    } else if (location.hash == "#tab6") {
+        $('#tab6').addClass('on').siblings().removeClass('on');
+    }
+})
+
+//패밀리사이트
+var bt = document.querySelector('#site_select');
+var wrap = document.querySelector('.family_wrap');
+function createEle() {
+    wrap.classList.toggle('on');
+    return false;
 }
+bt.addEventListener('click', createEle);
 
 
 //모바일

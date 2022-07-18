@@ -203,7 +203,7 @@ header .snsicon{
     display: flex;
     width: 100%;
     height: 960px;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
     background: url(/cjenm/images/con_pic1_op.png) no-repeat;
     background-size: cover;
@@ -235,6 +235,10 @@ header .snsicon{
     }
 }
 
+.top1{
+    display: none;
+}
+
 .top_txt{
     padding: 250px 0 0 0;
     height: 90%;
@@ -260,6 +264,7 @@ header .snsicon{
       opacity: 1;
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
+      transition: all ease-in-out;
     }
   }
 .main_h1{
@@ -425,7 +430,7 @@ header .snsicon{
 .news_sub a{
     display: flex;
     flex-direction: row;
-    height: 35px;
+    height: 37px;
     line-height: 35px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -433,8 +438,8 @@ header .snsicon{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     line-height: 2;
-    max-height: 50%;
-    margin: 18px 0;
+    max-height: 60%;
+    margin: 16px 0;
 }
 .sub_txt{
     display: flex;
@@ -443,11 +448,13 @@ header .snsicon{
 .sub_txt > h4{
     width: 75%;
     height: 28px;
+    font: 400 1rem 'Nanum Gothic';
 }
 .sub_txt > span{
     width: 25%;
     padding: 0 0 0 10px;
     text-align: right;
+    font: 400 1rem 'Nanum Gothic';
 }
 .pre_arrow{
     width: 6%;
