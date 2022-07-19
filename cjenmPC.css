@@ -1010,7 +1010,7 @@ footer .inner{
     width: 100%;
     display: block;
 }
-.sitemap .map > ul > li:hover a{
+.sitemap .map ul li:hover a{
     color: #FF9700;
     font: 700 1rem/2 'Nanum Gothic';
 }
