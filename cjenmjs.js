@@ -70,9 +70,9 @@ $(document).ready(function () {
     //주가정보 api
     var codeStock = 035760;
     // 개인계정의 인증키로 활성화된 API입력
-    var publicAPIurl = 'https://cors-anywhere.herokuapp.com/https://api.odcloud.kr/api/GetStockSecuritiesInfoService/v1/getStockPriceInfo?numOfRows=10&pageNo=1&resultType=json&beginBasDt=20220620&likeSrtnCd=035760&itmsNm=CJ%20ENM&mrktCls=KOSDAQ&serviceKey=n24O8BIWzcZnIauM7Fa4ihd4l68vwhljT43M07AI0Na%2B2ANYWPcMY6GYyLS8XVg4MOExLZywEk4WJkIGUMXuWg%3D%3D';
+    var publicAPIurl = 'https://runauxlabs.herokuapp.com/https://api.odcloud.kr/api/GetStockSecuritiesInfoService/v1/getStockPriceInfo?numOfRows=10&pageNo=1&resultType=json&beginBasDt=20220620&likeSrtnCd=035760&itmsNm=CJ%20ENM&mrktCls=KOSDAQ&serviceKey=n24O8BIWzcZnIauM7Fa4ihd4l68vwhljT43M07AI0Na%2B2ANYWPcMY6GYyLS8XVg4MOExLZywEk4WJkIGUMXuWg%3D%3D';
     // CORS이슈, 외부API를 사용하고 있는 입장에서는 서버를 제어할 수 없으므로 구글링에 나오는 해결법 중 HTTP 응답 헤더인 Access-Control-Allow-Origin 를 설정할 수 없음
-    // 프록시 서버를 사용하여 우회하는 방식으로 해결 https://cors-anywhere.herokuapp.com/
+    // 프록시 서버를 사용하여 우회하는 방식으로 해결 https://herokuapp.com/ 이 사이트에서 선생님이 만드신 주소로 변경
     // 프록시서버는 클라이언트가 프록시 서버 자신을 통해서 다른 네트워크 서비스에 간접적으로 접속할 수 있게 해 준다. 브라우저와 서버 간의 통신을 도와주는 중계서버라고 생각하면 된다. 
     $.getJSON(publicAPIurl, function (result) {
         var yesterStock = result.response.body.items.item[0]; //전날 주식정보
